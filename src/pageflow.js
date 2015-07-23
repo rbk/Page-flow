@@ -19,7 +19,7 @@ $(function(){
 		checkSection();
 	});
 	function checkSection() {
-		$('[flow-end]').each(function(){
+		$('[page-flow]').each(function(){
 			var o = $(this).offset().top;
 			var e = $(this).outerHeight();
 			var w = $(window).scrollTop();
