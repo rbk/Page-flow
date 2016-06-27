@@ -1,11 +1,11 @@
-$(function(){
+jQuery.fn.pageFlow = function( ) {
+	
+	// Add options later
 
 	// In page links
-	$('a[href*=#]:not([href=#])').click(function() {
-		$('#page-flow li').removeClass('active');
+	$(this).click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
-			$(this).parent().addClass('active');
 			target = target.length ? target : $('[page-flow=' + this.hash.slice(1) +']');
 			if (target.length) {
 				$('html,body').animate({
@@ -15,6 +15,10 @@ $(function(){
 			}
 		}
 	});
+}
+
+$(function(){
+
 	$(window).scroll(function(){
 		checkSection();
 	});
@@ -30,4 +34,6 @@ $(function(){
 			}
 		});
     }
+
 });
+

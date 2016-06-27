@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<style>
+		
+		section {
+			height: 800px;
+		}
+		section:nth-child(odd) {
+			background-color: #ddd;
+		}
+
+	</style>
+	<script src="assets/jquery-3.0.0.min.js"></script>
+	<script src="src/pageflow.js"></script>
+</head>
+<body>
+
+<nav>
+	<ul>
+		<li><a href="#1">One</a></li>
+		<li><a href="#2">Two</a></li>
+		<li><a href="#3">Three</a></li>
+		<li><a href="#4">Four</a></li>
+		<li><a href="#5">Five</a></li>
+	</ul>	
+</nav>
+
+<section id="1">
+	<h1>One</h1>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et incidunt, quam asperiores iste illum facere odit dicta eaque. Temporibus aspernatur magni inventore, molestiae at accusantium asperiores totam obcaecati harum assumenda.
+</section>
+
+<section id="2">
+	<h1>Two</h1>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et incidunt, quam asperiores iste illum facere odit dicta eaque. Temporibus aspernatur magni inventore, molestiae at accusantium asperiores totam obcaecati harum assumenda.
+</section>
+
+<section id="3">
+	<h1>Three</h1>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et incidunt, quam asperiores iste illum facere odit dicta eaque. Temporibus aspernatur magni inventore, molestiae at accusantium asperiores totam obcaecati harum assumenda.
+</section>
+
+<section id="4">
+	<h1>Four</h1>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et incidunt, quam asperiores iste illum facere odit dicta eaque. Temporibus aspernatur magni inventore, molestiae at accusantium asperiores totam obcaecati harum assumenda.
+</section>
+
+<section id="5">
+	<h1>Five</h1>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et incidunt, quam asperiores iste illum facere odit dicta eaque. Temporibus aspernatur magni inventore, molestiae at accusantium asperiores totam obcaecati harum assumenda.
+</section>
+
+<script>
+	(function($, window, document) {
+		
+		console.log( $('nav a').length )
+
+		$('nav a').pageFlow();
+
+	})(jQuery, window, document);
+</script>
+
+</body>
+</html>
